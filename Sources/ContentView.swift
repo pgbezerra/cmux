@@ -1040,7 +1040,7 @@ struct ContentView: View {
     @AppStorage(MinimalModeTitlebarDebugSettings.rightToggleTopInsetKey) private var rightTitlebarToggleTopInset = MinimalModeTitlebarDebugSettings.defaultRightToggleTopInset
     @AppStorage(MinimalModeTitlebarDebugSettings.trafficLightsXOffsetKey) private var trafficLightsXOffset = MinimalModeTitlebarDebugSettings.defaultTrafficLightsXOffset
     @AppStorage(MinimalModeTitlebarDebugSettings.trafficLightsYOffsetKey) private var trafficLightsYOffset = MinimalModeTitlebarDebugSettings.defaultTrafficLightsYOffset
-    @State private var sidebarWidth: CGFloat = 200
+    @State private var sidebarWidth: CGFloat = CGFloat(SessionPersistencePolicy.defaultSidebarWidth)
     @State private var hoveredResizerHandles: Set<SidebarResizerHandle> = []
     @State private var isResizerDragging = false
     @State private var sidebarDragStartWidth: CGFloat?
